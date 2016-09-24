@@ -20,4 +20,12 @@ Route::group(['prefix' => 'admin'],function(){
 
 	Route::resource('users','UsersController');
 	Route::get('users/{id}/destroy','UsersController@destroy')->name('admin.users.destroy');
+
+	Route::resource('categories','CategoriesController');
+	Route::get('categories/{id}/destroy','CategoriesController@destroy')->name('admin.categories.destroy');
+
+	Route::resource('tags','TagsController');
+	Route::get('tags/{id}/destroy','TagsController@destroy')->name('admin.tags.destroy');
 });
+
+Auth::routes();

@@ -15,16 +15,31 @@
           <li><a href="{!!URL::to('admin/users/create')!!}">Crear</a></li>
         </ul>
       </li>
-      <li><a href="#">Categorias</a></li>
+      <li>
+        <a href="#">Categorias</a>
+        <ul class="menu">
+          <li><a href="{!!URL::to('admin/categories')!!}">Ver</a></li>
+          <li><a href="{!!URL::to('admin/categories/create')!!}">Crear</a></li>
+        </ul>
+      </li>
       <li><a href="#">Articulos</a></li>
       <li><a href="#">Imagenes</a></li>
-      <li><a href="#">Tags</a></li>
+      <li>
+        <a href="#">Tags</a>
+        <ul class="menu">
+          <li><a href="{!!URL::to('admin/tags')!!}">Ver</a></li>
+          <li><a href="{!!URL::to('admin/tags/create')!!}">Crear</a></li>
+        </ul>
+      </li>
     </ul>
   </div>
   <div class="top-bar-right">
-    <ul class="menu" data-dropdown-menu>
+    <ul class="menu dropdown" data-dropdown-menu>
         <li>
-          <a href="">Opciones</a>
+          <a href="">{!!Auth::user()->name!!}</a>
+          <ul class="menu">
+            <li><a href="{!!URL::to('/logout')!!}">Salir</a></li>          
+          </ul>
         </li>
     </ul>
   </div>
