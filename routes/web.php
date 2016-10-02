@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('front.index');
 });
 
 
@@ -26,6 +26,11 @@ Route::group(['prefix' => 'admin'],function(){
 
 	Route::resource('tags','TagsController');
 	Route::get('tags/{id}/destroy','TagsController@destroy')->name('admin.tags.destroy');
+
+	Route::resource('articles','ArticlesController');
+	Route::get('articles/{id}/destroy','ArticlesController@destroy')->name('admin.articles.destroy');
+
+	Route::get('images','ImagesController@index');
 });
 
 Auth::routes();

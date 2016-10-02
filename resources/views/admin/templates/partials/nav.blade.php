@@ -7,7 +7,7 @@
   <div class="top-bar-left">
     <ul class="dropdown menu" data-dropdown-menu>
       <li class="menu-text">Blog Personal</li>
-      <li><a href="#">Inicio</a></li>
+      <li><a href="{!!URL::to('/')!!}" target="_blank">Inicio</a></li>
       <li>
         <a href="#">Usuarios</a>
         <ul class="menu">
@@ -22,8 +22,14 @@
           <li><a href="{!!URL::to('admin/categories/create')!!}">Crear</a></li>
         </ul>
       </li>
-      <li><a href="#">Articulos</a></li>
-      <li><a href="#">Imagenes</a></li>
+      <li>
+        <a href="#">Articulos</a>
+        <ul class="menu">
+          <li><a href="{!!URL::to('admin/articles')!!}">Ver</a></li>
+          <li><a href="{!!URL::to('admin/articles/create')!!}">Crear</a></li>
+        </ul>
+      </li>
+      <li><a href="{!!URL::to('admin/images')!!}">Imagenes</a></li>
       <li>
         <a href="#">Tags</a>
         <ul class="menu">
