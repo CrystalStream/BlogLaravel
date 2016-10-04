@@ -6,11 +6,22 @@
 .mt{
 	margin-top: 1em;
 }
+.black{
+	color:black !important;
+}
+.white{
+	color:white !important;
+}
 .trumbowyg-box{
 	background: white !important;
 }
-
-
+.main-section{
+	background: white;
+}
+.gray{
+	color:#DADADA;
+	font-size: 10px;
+}
 
 
 

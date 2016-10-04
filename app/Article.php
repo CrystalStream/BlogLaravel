@@ -9,6 +9,14 @@ class Article extends Model
 {
     use Sluggable;
 
+    public static function findBySlugOrFail($slug, $columns = array('*') ) 
+    { 
+        if ( ! is_null($slug = static::whereSlug($slug)->first($columns))) { 
+            return $slug; 
+        } 
+        throw new ModelNotFoundException; 
+    } 
+
     public function sluggable()
     {
         return [
@@ -39,4 +47,5 @@ class Article extends Model
     public function tags(){
         return $this->belongsToMany('App\Tag');
     }
+    
 }
